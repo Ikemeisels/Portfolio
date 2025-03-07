@@ -1,0 +1,128 @@
+body{
+    margin:0;
+    padding:0;
+    height: 100vh;
+    font-family: cursive;
+}
+
+
+h3{
+    text-align: center;
+}
+
+h1{
+    color: white;
+    
+}
+
+footer{
+    background-color:blue;
+    height: 5vh;
+    color:white;
+}
+
+
+#socials {
+    background-color: lightskyblue;
+    height: 5vh;
+    display: flex;
+    align-items: center; 
+    padding: 0 20px; 
+}
+
+#socials-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+}
+
+#socNav {
+    display: flex;
+    gap: 15px; 
+}
+
+
+#socNav img {
+        width: 20px; 
+        height: auto;
+        margin-right: 8px; 
+}
+
+
+
+
+
+
+
+
+#aboutMe {
+    background-image: linear-gradient(lightskyblue,blue);
+    display: flex;
+    justify-content: center; 
+    height: 90vh;
+    color:white;
+    
+}
+
+#content-wrapper {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    max-width: 1200px; 
+}
+
+#main {
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+
+
+#content img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+#content {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px;
+    flex-wrap: wrap; 
+    
+}
+
+#content p {
+    flex-grow: 1;
+    text-align: left;
+    word-wrap: break-word; 
+    max-width: 100%; 
+    font-size: 15;
+    background-image: linear-gradient(to right,lightskyblue,rgb(113, 192, 241));
+   
+    border-radius: 10px;
+    padding: 15px;
+
+}
+#projects {
+    width: 40%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: linear-gradient(to right,lightskyblue,rgb(113, 192, 241));
+    padding: 20px;
+    border-radius: 10px;
+   
+}
+
+#comingSoon{
+    font-style:italic;
+}
+ul{
+    font-style:italic;
+}
