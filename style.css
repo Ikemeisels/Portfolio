@@ -3,6 +3,7 @@ body {
     padding: 0;
     height: 100vh;
     font-family:monospace;
+    
 }
 
 html {
@@ -135,56 +136,65 @@ footer {
     background-clip: text;
 }
 
+
 /* About Me Section */
 #aboutMe {
     background-image: linear-gradient(lightskyblue, blue);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    color: white;
-    padding: 20px;
+    height:700px;
 }
 
-#content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-}
+
 
 /* Main Content */
 #main {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
+    width: 100%;
+    max-width: 1200px; 
+    display: flex;               /* Using flexbox */
+    justify-content: center;     /* Align children horizontally in the center */
+    align-items: center;         /* Align children vertically in the center */
+    gap: 20px;                   /* Space between image and paragraph */
+    width: 100%;
+    padding-top: 50px;
+    flex: 1px;
 }
 
-#content {
+/* Image Styling */
+#img {
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-#content img {
-    width: 150px;
-    height: auto;
+    width: 100%;               /* Fixed width for the image */
+    max-width: 400px;
+    object-fit: cover;
+    vertical-align:middle;
+    height:max-content;
     border-radius: 10px;
 }
 
-#content p {
+/* Paragraph Styling */
+#content  {
     flex-grow: 1;
     text-align: left;
     word-wrap: break-word;
-    max-width: 100%;
+    max-width: 60%;              /* Limits the width of the paragraph */
     font-size: 15px;
     background-image: linear-gradient(to right, lightskyblue, rgb(113, 192, 241));
     border-radius: 10px;
-    padding: 15px;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-around;
+    gap: 5px;
+
+
 }
+
+
+#content h3{
+    font-size: 50px;
+
+}
+
+
 
 /* Projects Section */
 #projects {
