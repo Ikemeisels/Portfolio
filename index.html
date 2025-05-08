@@ -12,32 +12,27 @@
         <div id="socials-container">
             <div id="NavBar">
                 <ul>
-                    <li><a href="#Contact">Contact</a></li>
                     <li><a href="#aboutMe">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    
+                    <li><a href="#socNav">Connect with Me</a></li>
                 </ul>   
             </div>
-            <div id="socNav">
-                <a href="mailto:ikemeisels@gmail.com"><img src="Images/images.png" title="Email"></a>
-                <a href="https://www.linkedin.com/in/ike-meisels" target="_blank"><img src="Images/linkedin.png" title="Linkedin"></a>
-                <a href="https://www.instagram.com/ike_meisels22/" target="_blank"><img src="Images/Instagram_icon.png.webp" title="Instagram"></a>
-                <a href="https://github.com/Ikemeisels" target="_blank"><img src="Images/github-logo-png_seeklogo-304612.png" title="Github"></a>
-            </div>
+            
         </div>
     </div>
 
     <section id="HomePage">
-        <h1>Ike Meisels</h1>
+        <h1 id="typewriter"></h1>
         <video autoplay muted loop id="bg-video">
             <source src="Videos/1851190-uhd_3840_2160_25fps.mp4" type="video/mp4">
-           
         </video>
     </section>
 
     <section id="aboutMe">
         <div id="main">
-
+            <video autoplay muted loop id="bg-video">
+                <source src="Videos/1851190-uhd_3840_2160_25fps.mp4" type="video/mp4">
+            </video>
             <div id="img">
                 <img src="Images/ike.jpg" alt="Ike Meisels">
             </div>
@@ -48,35 +43,59 @@
                     <br><br>
                     With experience in JavaScript, Python, Delphi, SQL, C++, Java, HTML, and CSS, I enjoy turning ideas into reality through code. Whether it's building dynamic websites, crafting seamless user experiences, or solving complex problems, I thrive on challenges and continuous learning.
                     <br><br>
-                    Currently, I am studying Computer Science at Queens College with the goal of receiving my BA after the Spring 2025 Term. In my free time, I enjoy exploring new ideas both philosophical and technological, both of which give me new creative ideas for personal projects that I'm passionate about.
+                    Currently, I am studying Computer Science at Queens College with the goal of receiving my BA.  In my free time, I enjoy exploring new ideas both philosophical and technological, both of which give me new creative ideas for personal projects that I'm passionate about.
                     <br><br>
                     I’m always eager to collaborate and learn from others.
                 </p>
             </div>
         </div>
     </section>
-    
 
-    <section id="projects">
-        <div>
-            <h3>Projects</h3>
-            <p id="comingSoon">Coming soon 
-                <br>
-                Will have all projects on GitHub once I link projects to GitHub.
-            </p>
-            <ul>
-                <li><a href="https://github.com/Ikemeisels/Portfolio">Portfolio on GitHub</a></li>
-            </ul>
-            <div id="Carusel">
-                <br><br><br>
-                <p>Carousel of pictures of my projects</p>
+    <section id ="projects">
+        <div class ="holo">
+            <div class = "inner">
+        <a href="https://github.com/Ikemeisels" target="_blank" style="text-decoration: none;">
+            <h3 id="work">View My Work</h3>
+        </a>
+        </div>
+        </div>
+    </section>
+
+    <section id="second">
+        <div id="flex">
+            
+            <!-- Social Nav inside projects -->
+            <div id="socNav">
+                
+                <ul>
+                    <li>
+                        <a href="mailto:ikemeisels@gmail.com">
+                            <img class="icon" src="Images/images.png" title="Email" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/ike-meisels" target="_blank">
+                            <img class="icon" src="Images/linkedin.png" title="LinkedIn" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/ike_meisels22/" target="_blank">
+                            <img class="icon" src="Images/Instagram_icon.png.webp" title="Instagram" />
+                        </a>
+                    </li>
+                    
+                </ul>
             </div>
         </div>
     </section>
+
+   
     
+    <script src="script.js"></script>
+
     <footer>
         Copyright 2025
     </footer>
-    
+
 </body>
 </html>
