@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Function for typing text
-    function typeText(element, text, speed = 20, callback = null, loop = false) {
+    function typeText(element, text, speed = 75, callback = null, loop = false) {
         let index = 0;
         
         // Function to type the text forward
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Start deleting backwards if loop is enabled
             if (loop && index === text.length) {
-                setTimeout(deleteText, 3000); // Delay before starting to delete
+                setTimeout(deleteText, 1500); // Delay before starting to delete
             }
         }
 
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(deleteText, speed); // Delete character by character
             } else {
                 // Once deleted, start typing again
-                setTimeout(typeForward, 500); // Delay before retyping
+                setTimeout(typeForward, 200); // Delay before retyping
             }
         }
 
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const homepageText = "Ike Meisels";
     const homepageTarget = document.getElementById("typewriter");
     homepageTarget.textContent = "";
-    typeText(homepageTarget, homepageText, 50, null, true); // Loop enabled here
+    typeText(homepageTarget, homepageText, 75, null, true); // Loop enabled here
 
     // About Me Typewriter Setup (only typed once, no loop or deletion)
     const aboutTarget = document.querySelector("#content p");
@@ -73,4 +73,4 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     observer.observe(aboutTarget);
-});
+});
