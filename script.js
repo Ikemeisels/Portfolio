@@ -1,27 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
-    function typeText(element, text, speed = 40, callback = null) {
+    // Function for typing text
+    function typeText(element, text, speed = 20, callback = null, loop = false) {
         let index = 0;
-        function type() {
+        
+        // Function to type the text forward
+        function typeForward() {
             if (index < text.length) {
                 element.textContent += text.charAt(index);
                 index++;
-                setTimeout(type, speed);
+                setTimeout(typeForward, speed);
             } else if (callback) {
                 callback();
             }
-        }
-        type();
-    }
 
-    // Homepage Typewriter
+            // Start deleting backwards if loop is enabled
+            if (loop && index === text.length) {
+                setTimeout(deleteText, 3000); // Delay before starting to delete
+            }
+        }
+
+        // Function to delete the text backwards
+        function deleteText() {
+            if (index > 0) {
+                element.textContent = text.substring(0, index - 1);
+                index--;
+                setTimeout(deleteText, speed); // Delete character by character
+            } else {
+                // Once deleted, start typing again
+                setTimeout(typeForward, 500); // Delay before retyping
+            }
+        }
+
+        typeForward();
+    }
+    
+    // Homepage Typewriter with loop (delete and retype on loop)
     const homepageText = "Ike Meisels";
     const homepageTarget = document.getElementById("typewriter");
     homepageTarget.textContent = "";
-    typeText(homepageTarget, homepageText, 150);
+    typeText(homepageTarget, homepageText, 50, null, true); // Loop enabled here
 
-    // About Me Typewriter Setup
+    // About Me Typewriter Setup (only typed once, no loop or deletion)
     const aboutTarget = document.querySelector("#content p");
-    const aboutText = `
+    const aboutText = ` 
         Hello! My name is Ike Meisels, and I am a passionate Software Developer working for DellData Systems out of New City, NY. 
         I specialize in SQL, Data Analysis, and Delphi programming, and I love creating innovative and efficient solutions to personal obstacles.
 
@@ -52,4 +73,4 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     observer.observe(aboutTarget);
-});
+});
