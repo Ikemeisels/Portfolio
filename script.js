@@ -13,24 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 callback();
             }
 
-            // Start deleting backwards if loop is enabled
-            if (loop && index === text.length) {
-                setTimeout(deleteText, 1500); // Delay before starting to delete
-            }
+            
         }
 
-        // Function to delete the text backwards
-        function deleteText() {
-            if (index > 0) {
-                element.textContent = text.substring(0, index - 1);
-                index--;
-                setTimeout(deleteText, speed); // Delete character by character
-            } else {
-                // Once deleted, start typing again
-                setTimeout(typeForward, 200); // Delay before retyping
-            }
-        }
-
+        
         typeForward();
     }
     
@@ -38,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const homepageText = "Ike Meisels";
     const homepageTarget = document.getElementById("typewriter");
     homepageTarget.textContent = "";
-    typeText(homepageTarget, homepageText, 75, null, true); // Loop enabled here
+    typeText(homepageTarget, homepageText, 75, null, false); // Loop enabled here
 
     // About Me Typewriter Setup (only typed once, no loop or deletion)
     const aboutTarget = document.querySelector("#content p");
